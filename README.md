@@ -4,4 +4,8 @@ Ilman kirjautumista sivuilla voi selata drinkkejä joko lisäysjärjestyksessä,
 
 [Projekti Herokussa](http://hansun-thsoa-drinkit.herokuapp.com/)
 
+[Tietokantakaavio] (https://github.com/hanzusd/DrinkkiArkisto/blob/master/documentation/db_diagram.md)
+
+[User stories] (https://github.com/hanzusd/DrinkkiArkisto/blob/master/documentation/user_stories.md)
+
 
