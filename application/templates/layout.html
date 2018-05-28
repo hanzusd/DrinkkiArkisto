@@ -6,6 +6,10 @@
     </head>
 
     <body>
+      <ul>
+	<li><a href="{{ url_for('drinks_index') }}">List drinks</a></li>
+	<li><a href="{{ url_for('drinks_form') }}">Add a drink</a></li>
+      </ul>
       {% block body %}
       <p>
 	Content
