@@ -1,6 +1,8 @@
 from flask import render_template, request, url_for, redirect
+
 from application import app, db 
 from application.drinks.models import Drink
+from application.drinks.forms import DrinkForm
 
 @app.route("/")
 def index():
@@ -12,11 +14,16 @@ def drinks_index():
 
 @app.route("/drinks/new/")
 def drinks_form():
-   	 return render_template("drinks/new.html")
+   	 return render_template("drinks/new.html", form = DrinkForm())
 
 @app.route("/drinks/", methods=["POST"])
 def drinks_create():
-	d = Drink(request.form.get("name"))
+	form = DrinkForm(request.form)
+
+	if not form.validate():
+        	return render_template("drinks/new.html", form = form)
+
+	d = Drink(form.name.data)
 
 	db.session().add(d)
 	db.session().commit()
