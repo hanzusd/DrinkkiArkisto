@@ -14,6 +14,9 @@ from application.drinks import models
 from application.auth import models 
 from application.auth import views
 
+from application.register import views
+from application.register import models
+
 # kirjautuminen
 from application.auth.models import User
 from os import urandom

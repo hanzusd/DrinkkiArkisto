@@ -12,6 +12,7 @@
 	</p>
 	{% else %}
 	<a href="{{ url_for('auth_login') }}">Kirjaudu</a>
+	<a href="{{ url_for('register') }}">Rekisteröidy</a>
 	{% endif %}
       <ul>
 	<li><a href="{{ url_for('drinks_index') }}">Kaikki drinkit</a></li>
